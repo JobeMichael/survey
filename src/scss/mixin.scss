@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+@mixin text-style($size: inherit, $color: $primary-color, $weight: normal) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin layout-lg($threshold: 1024px) {
+  @media (min-width: $threshold) {
+    @content;
+  }
+}
+@mixin layout-md($threshold: 420px) {
+  @media (min-width: $threshold) {
+    @content;
+  }
+}
+
+@mixin layout-sm($threshold: 420px) {
+  @media (max-width: $threshold) {
+    @content;
+  }
+}

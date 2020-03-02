@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar/> renders the component 1`] = `
+<body>
+  <div>
+    <div
+      class="progressWrapper"
+    >
+      <span
+        class="progress-info"
+      >
+        1
+         of 
+        10
+         answered
+      </span>
+      <div
+        class="progress-bar"
+      >
+        <div
+          class="ant-progress ant-progress-line ant-progress-status-normal ant-progress-show-info ant-progress-default"
+        >
+          <div>
+            <div
+              class="ant-progress-outer"
+            >
+              <div
+                class="ant-progress-inner"
+              >
+                <div
+                  class="ant-progress-bg"
+                  style="width: 20%; height: 8px;"
+                />
+              </div>
+            </div>
+            <span
+              class="ant-progress-text"
+              title="20%"
+            >
+              20%
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

@@ -1,0 +1,51 @@
+@import "scss/variables";
+@import "scss/mixin";
+
+.radioStyle {
+  // display: flex;
+  // margin-top: 15px;
+  display: inline-flex;
+  margin-top: 15px;
+  float: left;
+  clear: both;
+}
+
+// antd component styles override
+.ant-radio-inner {
+  width: 32px;
+  height: 32px;
+}
+h2.ant-typography,
+.ant-typography h2 {
+  font-size: 1.5rem;
+  @include layout-lg {
+    font-size: 1.75rem;
+  }
+}
+
+.ant-radio-inner::after {
+  top: 4px;
+  left: 4px;
+  width: 23px;
+  height: 23px;
+  background-color: $primary-color;
+  border-radius: 12px;
+}
+.ant-radio-checked::after {
+  height: 30px;
+  width: 30px;
+}
+
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus + .ant-radio-inner {
+  border-color: $primary-color;
+}
+
+span.ant-radio + * {
+  padding: 0 8px;
+  font-size: 1.25rem;
+  position: initial;
+  white-space: normal;
+  margin-top: 4px;
+}

@@ -1,0 +1,58 @@
+@import "scss/variables";
+@import "scss/mixin.scss";
+
+.layout {
+  min-height: 100vh;
+
+  .header {
+    background: inherit;
+    margin: 15px 10%;
+    padding: 0;
+    height: auto;
+    @include layout-lg {
+      margin: 30px 10%;
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+      color: $primary-color;
+      font-size: 1.5rem;
+      @include layout-lg {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .content {
+    @include layout-lg {
+      max-height: 700px;
+      margin: 10px 15%;
+    }
+    margin: 0px 4%;
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 4px;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    @include layout-sm {
+      align-items: flex-start;
+    }
+
+    .frame-header {
+      background: #edeeee;
+      height: 25px;
+      width: 100%;
+      align-self: baseline;
+    }
+
+    .frame-footer {
+      background: $primary-color;
+      height: 50px;
+      width: 100%;
+      align-self: flex-end;
+      display: flex;
+    }
+  }
+}

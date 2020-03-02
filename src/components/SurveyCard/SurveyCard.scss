@@ -1,0 +1,35 @@
+@import "scss/variables";
+@import "scss/mixin";
+
+.link {
+  width: 90%;
+  justify-content: center;
+  margin: 0 0 10px;
+  padding: 0 25px;
+  height: 100px;
+  background-color: $primary-color;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 250ms ease-in-out 0s;
+  display: flex;
+  align-items: center;
+
+  @include layout-md {
+    width: 180px;
+    justify-content: initial;
+    margin-right: 10px;
+    height: 150px;
+  }
+  @include text-style(1.5rem, $secondary-color, 700);
+
+  &:hover {
+    box-shadow: rgba(36, 28, 21, 0.4) 0px 20px 50px;
+    transform: translateY(-12px);
+    color: $primary-white;
+  }
+}
+@include layout-md {
+  .frame-header + .link {
+    margin-left: 10px;
+  }
+}

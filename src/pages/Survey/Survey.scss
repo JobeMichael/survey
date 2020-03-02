@@ -1,0 +1,38 @@
+@import "scss/variables";
+@import "scss/mixin";
+
+.survey {
+  width: 80%;
+  align-self: flex-start;
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.button-holder {
+  margin-top: 20px;
+
+  button {
+    @include layout-sm {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// antd components styles override
+.ant-btn-round {
+  height: 52px;
+  padding: 0 60px;
+  border-radius: 32px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $secondary-color;
+}
+.ant-btn-round:hover {
+  background-color: #49c4d4;
+  border-color: $primary-color;
+  color: $primary-white;
+}

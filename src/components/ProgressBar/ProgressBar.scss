@@ -1,0 +1,30 @@
+@import "scss/variables";
+@import "scss/mixin";
+
+.progressWrapper {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  @include layout-lg {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ant-progress-text,
+  .progress-info {
+    @include text-style($weight: 700, $color: $primary-white);
+  }
+  .ant-progress-inner {
+    border: 1px solid $primary-white;
+    background-color: $primary-color;
+  }
+  .ant-progress-bg {
+    background-color: $primary-white;
+  }
+  .progress-bar {
+    width: 50%;
+    margin-left: 12px;
+  }
+}
