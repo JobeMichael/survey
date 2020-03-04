@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getApiUrl } from "helpers/getApiUrl";
-import { api } from "services/api";
+import { getData } from "services/api";
 
 const useFetch = (type, option = {}) => {
   const [state, setState] = useState({
@@ -12,7 +12,7 @@ const useFetch = (type, option = {}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await api(getApiUrl(type, { id: option.id }));
+        const result = await getData(getApiUrl(type, { id: option.id }));
 
         setState(prevState => {
           return { ...prevState, data: result, loading: false };

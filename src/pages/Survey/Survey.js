@@ -13,10 +13,10 @@ export default function Survey() {
 
   const {
     questionIndex,
-    hasSelected,
     setSurveyState,
     handleSubmit,
-    handleChange
+    handleChange,
+    value
   } = useSurveySubmit();
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Survey() {
               htmlType="submit"
               shape="round"
               size="default"
-              disabled={hasSelected ? false : true}
+              disabled={value ? false : true}
             >
               Next
             </Button>
