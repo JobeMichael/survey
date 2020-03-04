@@ -3,24 +3,21 @@
 
 .link {
   width: 90%;
-  justify-content: center;
   margin: 0 0 10px;
-  padding: 0 25px;
-  height: 100px;
   background-color: $primary-color;
   cursor: pointer;
   border-radius: 6px;
   transition: all 250ms ease-in-out 0s;
-  display: flex;
-  align-items: center;
+  .ant-card-head-title {
+    @include text-style(1rem, #c6dcdc, 700);
+  }
 
   @include layout-md {
     width: 180px;
     justify-content: initial;
     margin-right: 10px;
-    height: 150px;
   }
-  @include text-style(1.5rem, $secondary-color, 700);
+  @include text-style(1.25rem, $secondary-color, 700);
 
   &:hover {
     box-shadow: rgba(36, 28, 21, 0.4) 0px 20px 50px;
