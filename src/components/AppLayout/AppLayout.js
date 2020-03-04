@@ -21,7 +21,7 @@ const AppLayout = ({ children }) => {
   return (
     <Layout className="layout">
       <Header className="header">
-        <Title level={1}>Survey - Coding Test</Title>
+        <Title level={1}>Survey</Title>
       </Header>
       <Content className="content">
         <div className="frame-header" />

@@ -8,34 +8,16 @@ import Question from "components/Question/Question";
 import "./Survey.scss";
 
 export default function Survey() {
-  // const [value, setValue] = useState("");
-  // const [questionIndex, setQuestionIndex] = useState(0);
   let { id } = useParams();
   const { data, loading } = useFetch("detail", { id });
-
-  const onNext = () => {
-    // var [questionId, selectedAns] = value.split("##");
-    // const ans = {
-    //   question_id: questionId,
-    //   value: selectedAns
-    // };
-    // userAnswers.current.push(ans);
-    // if (totalQuestion !== currentStep - 1) {
-    //   setQuestionIndex(prevState => prevState + 1);
-    // }
-    // setValue("");
-  };
 
   const {
     questionIndex,
     hasSelected,
-    // userAnswers,
     setSurveyState,
     handleSubmit,
-    handleChange,
-    currentStep,
-    totalQuestion
-  } = useSurveySubmit(onNext);
+    handleChange
+  } = useSurveySubmit();
 
   useEffect(() => {
     if (!loading) {
@@ -48,7 +30,7 @@ export default function Survey() {
     }
   }, [data, loading, setSurveyState]);
 
-  if (loading || totalQuestion === currentStep - 1) {
+  if (loading) {
     return <Spin tip="Loading..." size="large"></Spin>;
   }
 

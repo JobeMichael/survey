@@ -26,18 +26,25 @@ export const useSurveySubmit = () => {
       event.preventDefault();
 
       setHasSelected(false);
+
+      // update survey state data.
       setSurveyState(prevState => ({
         ...prevState,
         currentStep: prevState.currentStep + 1
       }));
 
+      // store user selected answers in array (useRef)
       storeUserAnswers();
 
+      // post data if user answered all questions.
       if (totalQuestion === currentStep) {
         postData();
         return;
       }
+      // question index increment to render next question
       setQuestionIndex(prevState => prevState + 1);
+
+      // clear current user's answer
       setValue("");
     }
   };
@@ -70,9 +77,7 @@ export const useSurveySubmit = () => {
     questionIndex,
     handleChange,
     hasSelected,
-    totalQuestion,
     setSurveyState,
-    handleSubmit,
-    currentStep
+    handleSubmit
   };
 };
